@@ -200,7 +200,6 @@ impl Remodel {
             .map_err(|err| rlua::Error::external(format!("{:?}", err)))?;
 
         Remodel::import_tree_children(context, source_tree)
-
     }
 
     fn read_place_asset(context: Context<'_>, asset_id: u64) -> rlua::Result<LuaInstance> {
